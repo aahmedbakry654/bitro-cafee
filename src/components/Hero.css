@@ -9,7 +9,7 @@
   align-items: center;
   text-align: center;
   padding: 0 20px;
-  box-sizing: border-box;
+  box-sizing: border-box;
 }
 @media (max-width: 768px) {
   .hero h1 {
