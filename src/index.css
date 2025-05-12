@@ -1,18 +1,18 @@
-
 body {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
   overflow-x: hidden;
-  touch-action: manipulation; /* يمنع التكبير على بعض الأجهزة */
-  -webkit-text-size-adjust: 100%; /* يمنع تغيير حجم النص */
-  background-image: url('../images/bacck.jpg'); /* عدّل المسار حسب مكان الصورة */
+  touch-action: manipulation;
+  -webkit-text-size-adjust: 100%;
+  background-image: url('../images/bacck.jpg');
   background-repeat: no-repeat;
-  background-size: cover;      /* بتخلي الصورة تغطي الشاشة كلها */
-  background-position: center; /* بتوسّط الصورة */
-  background-attachment: fixed; /* (اختياري) بتخلي الخلفية ثابتة */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
+
 a {
   font-weight: 500;
   color: #b8db2c;
@@ -55,6 +55,35 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #f9f9f9;
+  }
+}
+
+/* دي اللي بتظبط الموبايل */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .menu-item {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .menu-button {
+    font-size: 14px;
+    padding: 12px;
+    width: 100%;
 }
 }
