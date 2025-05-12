@@ -1,97 +1,131 @@
+/* Hero Section Styles */
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;
-  overflow-x: hidden;
-}
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem !important;
-  }
-
-  .hero img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .hero button {
-    font-size: 1rem;
-    padding: 10px 20px;
-}
+  height: 100vh; /* ارتفاع كامل لشاشة المستخدم */
+  overflow: hidden; /* للتحكم في المحتوى */
 }
 
-
-
-video {
-  width: 100vw;
-  height: 100vh;
+/* تنسيق الفيديو */
+.hero video {
+  position: absolute;
+ 
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  display: block;
+  z-index: 1;
 }
 
+/* النص فوق الفيديو */
 .hero-text-above {
   position: absolute;
   top: 20%;
   width: 100%;
   text-align: center;
   z-index: 2;
+  padding: 0 15px; /* هوامش جانبية للموبايل */
 }
 
+/* العنوان الرئيسي مع تأثير التوهج */
 .bitro-glow-text {
   font-size: 4rem;
   color: white;
   font-weight: bold;
-  text-shadow:
-    0 0 10px #ffcc00,
-    0 0 20px #ffcc00,
-    0 0 40px #ff9900,
-    0 0 80px #ff3300;
+  text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 40px #ff9900, 0 0 80px #ff3300;
   animation: flicker 3s infinite alternate;
   filter: contrast(120%) brightness(130%);
+  margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
-@keyframes shineMove {
-  0% {
-    background-position: 0%;
-  }
-  100% {
-    background-position: 300%;
-  }
-}
-
-@keyframes flicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    opacity: 1;
-  }
-  20%, 22%, 24%, 55% {
-    opacity: 0.6;
-  }
-}
-
-@keyframes pulseGlow {
-  0%, 100% {
-    text-shadow:
-      0 0 2px #fff,
-      0 0 10px #ff9900,
-      0 0 20px #ff0080,
-      0 0 30px #ff0080,
-      0 0 40px #ff0080;
-  }
-  50% {
-    text-shadow:
-      0 0 4px #ffe,
-      0 0 16px #ff00cc,
-      0 0 28px #ff00cc,
-      0 0 36px #ff00cc,
-      0 0 50px #ff00cc;
-}
-}
+/* نص الترحيب */
 .welcome-glow {
   color: #ffffff;
   font-size: 1.5rem;
   margin-top: 10px;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
   animation: slideIn 2s ease-in-out;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* الفقرة المضيئة */
+.glow-paragraph {
+  font-size: 1.4rem;
+  color: #fff;
+  text-align: center;
+  margin-top: 1rem;
+  text-shadow: 0 0 5px #ff00cc, 0 0 10px #ff00cc, 0 0 20px #ff00cc, 0 0 30px #ff3399, 0 0 40px #ff3399;
+  animation: pulseGlow 3s ease-in-out infinite;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* حاوية زر القائمة */
+.menu-button-container {
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+/* زر القائمة */
+.menu-button {
+  padding: 14px 32px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #030303, #b0492f);
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 8px 20px rgba(255, 65, 108, 0.6);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  min-width: 200px;
+}
+
+.menu-button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(61, 180, 10, 0.8);
+  background: linear-gradient(135deg, #4608c4, #d6c11b);
+  color: #0a0b08;
+}
+
+/* أيقونة اللغة */
+.language-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2.2rem;
+  color: #fff;
+  text-shadow: 0 0 10px #00ffe1, 0 0 20px #00ffe1;
+  animation: glowIcon 1.5s ease-in-out infinite alternate;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* الرسوم المتحركة */
+@keyframes shineMove {
+  0% { background-position: 0%; }
+  100% { background-position: 300%; }
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+  20%, 22%, 24%, 55% { opacity: 0.6; }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    text-shadow: 0 0 2px #fff, 0 0 10px #ff9900, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080;
+  }
+  50% {
+    text-shadow: 0 0 4px #ffe, 0 0 16px #ff00cc, 0 0 28px #ff00cc, 0 0 36px #ff00cc, 0 0 50px #ff00cc;
+  }
 }
 
 @keyframes slideIn {
@@ -105,79 +139,104 @@ video {
   }
 }
 
-.menu-button-container {
-  position: relative; /* عشان يظهر تحت الفيديو */
-  margin-top: 20px;
-  width: 100%;
-  text-align: center;
-  z-index: 1;
-}
-
-.menu-button {
-  padding: 14px 32px;
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #fff;
-  background: linear-gradient(135deg, #030303, #b0492f);
-  border: none;
-  border-radius: 30px;
-  box-shadow: 0 8px 20px rgba(255, 65, 108, 0.6);
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.menu-button:hover {
-  transform: scale(1.08);
-  box-shadow: 0 10px 25px rgba(61, 180, 10, 0.8);
-  background: linear-gradient(135deg, #4608c4, #d6c11b);
-  color: #0a0b08;
-}
-
-.language-icon {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 2.2rem;
-  color: #fff;
-  text-shadow: 0 0 10px #00ffe1, 0 0 20px #00ffe1;
-  animation: glowIcon 1.5s ease-in-out infinite alternate;
-  cursor: default;
-}
-
 @keyframes glowIcon {
-  from {
-    text-shadow: 0 0 5px #00ffe1;
+  from { text-shadow: 0 0 5px #00ffe1; }
+  to { text-shadow: 0 0 20px #00ffe1, 0 0 30px #00ffe1; }
+}
+
+/* تنسيقات للأجهزة الكبيرة (أجهزة سطح المكتب) */
+@media (min-width: 1200px) {
+  .bitro-glow-text {
+    font-size: 4.5rem;
   }
-  to {
-    text-shadow: 0 0 20px #00ffe1, 0 0 30px #00ffe1;
+  
+  .welcome-glow {
+    font-size: 1.7rem;
+    max-width: 70%;
+  }
+  
+  .glow-paragraph {
+    font-size: 1.5rem;
+    max-width: 70%;
   }
 }
 
-.glow-paragraph {
-  font-size: 1.4rem;
-  color: #fff;
-  text-align: center;
-  margin-top: 1rem;
-  text-shadow:
-    0 0 5px #ff00cc,
-    0 0 10px #ff00cc,
-    0 0 20px #ff00cc,
-    0 0 30px #ff3399,
-    0 0 40px #ff3399;
-  animation: pulseGlow 3s ease-in-out infinite;
+/* تنسيقات للأجهزة المتوسطة (الأجهزة اللوحية والشاشات الصغيرة) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .bitro-glow-text {
+    font-size: 3.5rem;
+  }
+  
+  .welcome-glow {
+    font-size: 1.4rem;
+    max-width: 80%;
+  }
+  
+  .glow-paragraph {
+    font-size: 1.3rem;
+    max-width: 80%;
+  }
+  
+  .menu-button {
+    padding: 12px 28px;
+    font-size: 1.3rem;
+  }
 }
 
-@keyframes pulseGlow {
-  0%, 100% {
-    text-shadow:
-      0 0 5px #ff00cc,
-      0 0 10px #ff00cc,
-      0 0 20px #ff00cc;
+/* تنسيقات للأجهزة الصغيرة (الهواتف المحمولة) */
+@media (max-width: 767px) {
+  .hero-text-above {
+    top: 15%;
   }
-  50% {
-    text-shadow:
-      0 0 15px #ff00cc,
-      0 0 25px #ff3399,
-      0 0 35px #ff66cc;
+  
+  .bitro-glow-text {
+    font-size: 2.5rem;
+  }
+  
+  .welcome-glow {
+    font-size: 1.2rem;
+  }
+  
+  .glow-paragraph {
+    font-size: 1.1rem;
+  }
+  
+  .menu-button {
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    min-width: 80%;
+    max-width: 280px;
+  }
+  
+  .language-icon {
+    font-size: 1.8rem;
+    top: 15px;
+    right: 15px;
+  }
+}
+
+/* تنسيقات للأجهزة الصغيرة جداً */
+@media (max-width: 480px) {
+  .hero-text-above {
+    top: 12%;
+  }
+  
+  .bitro-glow-text {
+    font-size: 2rem;
+  }
+  
+  .welcome-glow {
+    font-size: 1.1rem;
+  }
+  
+  .glow-paragraph {
+    font-size: 1rem;
+    margin-top: 0.8rem;
+  }
+  
+  .menu-button {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    min-width: 90%;
 }
 }
