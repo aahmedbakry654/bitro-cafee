@@ -15,17 +15,15 @@ const Hero = () => {
       </div>
 
       {/* الفيديو الخلفية */}
-      <div className="hero">
-        <video
-          className="hero-video"
-          src="/vediopag/pagg.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-        />
-      </div>
+      <div className="w-full h-screen overflow-hidden">
+  <video
+    src="../vediopag/pagg.mp4"
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="w-full h-full object-cover"/>
+</div>
       
 
       {/* زر المينيو */}

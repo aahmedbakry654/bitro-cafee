@@ -20,15 +20,17 @@ html {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-
-  background-image: url('../images/bacck.jpg');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  touch-action: manipulation; /* يمنع التكبير على بعض الأجهزة */
+  -webkit-text-size-adjust: 100%; /* يمنع تغيير حجم النص */
+  background-image: url('../images/bacck.jpg'); /* عدّل المسار حسب مكان الصورة */
+  background-repeat: no-repeat;
+  background-size: cover;      /* بتخلي الصورة تغطي الشاشة كلها */
+  background-position: center; /* بتوسّط الصورة */
+  background-attachment: fixed; /* (اختياري) بتخلي الخلفية ثابتة */
 }
 a {
   font-weight: 500;
