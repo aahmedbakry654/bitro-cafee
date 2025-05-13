@@ -14,16 +14,14 @@ const Hero = () => {
         
       </div>
 
-      {/* الفيديو الخلفية */}
-      <div className="video-container">
+      <div className="w-full h-screen overflow-hidden">
   <video
     src="../vediopag/pagg.mp4"
     autoPlay
     loop
     muted
     playsInline
-    className="video-bg"
-  />
+    className="w-full h-full object-cover"/>
 </div>
       
 
