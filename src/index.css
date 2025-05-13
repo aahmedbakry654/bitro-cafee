@@ -7,18 +7,18 @@
 html, body {
   width: 100%;
   min-height: 100%;
-  overflow-x: hidden; /* إخفاء التمرير الأفقي */
+  overflow-x: hidden;
   touch-action: manipulation;
   -webkit-text-size-adjust: 100%;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   color: #ffffff;
+  background-color: #000; /* fallback لون */
   background-image: url('../images/bacck.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* إزالة هذه الخاصية على الأجهزة الصغيرة */
+  background-attachment: scroll; /* ثابت لكل الأجهزة */
 }
-
 /* الروابط */
 a {
   font-weight: 500;

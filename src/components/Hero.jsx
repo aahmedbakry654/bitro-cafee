@@ -9,21 +9,20 @@ const Hero = () => {
     <>
       {/* نص بيترو كافيه المتوهج */}
       <div className="hero-text-above">
-     
-        <h1 className="bitro-glow-text">Bitro </h1>
-        
+        <h1 className="bitro-glow-text">Bitro</h1>
       </div>
 
-      <div className="w-full h-screen overflow-hidden">
-  <video
-    src="../vediopag/pagg.mp4"
-    autoPlay
-    loop
-    muted
-    playsInline
-    className="w-full h-full object-cover"/>
-</div>
-      
+      {/* فيديو الخلفية */}
+      <div className="hero-video-container">
+        <video
+          src="../vediopag/pagg.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="hero-video"
+        />
+      </div>
 
       {/* زر المينيو */}
       <div className="menu-button-container">
