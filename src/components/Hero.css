@@ -1,14 +1,12 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
 
-body, html {
-  width: 100%;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
+
 
 /* فيديو الخلفية */
 .hero-video-container {
