@@ -1,100 +1,105 @@
-/* تنسيقات التطبيق */
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0d0d0d;
+  color: #ffffff;
+  overflow-x: hidden;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+/* محتوى بعد الهيرو */
+.main-section {
+  min-height: 100vh;
+  padding: 5rem 2rem;
+  background: linear-gradient(145deg, #000000, #1a1a1a, #000000);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 2s ease-out;
 }
 
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.main-section h2 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: #fff;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px #00f2ff, 0 0 20px #ff00f2;
+  animation: glowHeading 3s ease-in-out infinite alternate;
 }
 
-.card {
-  padding: 2em;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
+.main-section p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  text-align: center;
+  line-height: 1.6;
+  color: #d1d1d1;
+  background: linear-gradient(90deg, #ffffff, #ff00f2, #00f2ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: flowText 5s linear infinite;
 }
 
-.read-the-docs {
-  color: #888;
-  margin: 20px 0;
+/* زر CTA */
+.cta-button {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background: linear-gradient(45deg, #ff00f2, #00f2ff, #fff600);
+  border: none;
+  border-radius: 12px;
+  color: #000;
+  font-weight: bold;
+  box-shadow: 0 0 20px #ff00f2, 0 0 30px #00f2ff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-/* رسوم متحركة للشعار */
-@keyframes logo-spin {
+.cta-button:hover {
+  transform: scale(1.1) rotate(-2deg);
+}
+
+/* الخدع البصرية */
+@keyframes glowHeading {
   from {
-    transform: rotate(0deg);
+    text-shadow: 0 0 5px #00f2ff, 0 0 15px #ff00f2;
   }
   to {
-    transform: rotate(360deg);
+    text-shadow: 0 0 15px #ff00f2, 0 0 25px #fff600;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes flowText {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-section {
+    padding: 3rem 1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
   }
 }
 
-/* تنسيقات للأجهزة الكبيرة (أجهزة سطح المكتب) */
-@media (min-width: 1200px) {
-  .logo {
-    height: 7em;
-    padding: 1.7em;
-  }
-  
-  .card {
-    padding: 2.5em;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-/* تنسيقات للأجهزة المتوسطة (الأجهزة اللوحية والشاشات الصغيرة) */
-@media (min-width: 768px) and (max-width: 1199px) {
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-  }
-  
-  .card {
-    padding: 2em;
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-/* تنسيقات للأجهزة الصغيرة (الهواتف المحمولة) */
-@media (max-width: 767px) {
-  .logo {
-    height: 4.5em;
-    padding: 1.2em;
-  }
-  
-  .card {
-    padding: 1.5em;
-    margin: 15px;
-  }
-}
-
-/* تنسيقات للأجهزة الصغيرة جداً */
 @media (max-width: 480px) {
-  .logo {
-    height: 4em;
-    padding: 1em;
+  .main-section h2 {
+    font-size: 2rem;
   }
-  
-  .card {
-    padding: 1.2em;
-    margin: 10px;
+
+  .main-section p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
 }
 }
