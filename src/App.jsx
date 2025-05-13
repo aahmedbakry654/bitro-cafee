@@ -12,9 +12,6 @@ import './App.css';
 const App = () => {
   const [fullscreenImage, setFullscreenImage] = useState(null);
 
-  const handleImageClick = (src) => {
-    setFullscreenImage(src);
-  };
 
   const handleClose = () => {
     setFullscreenImage(null);
