@@ -115,18 +115,3 @@ body, html {
   }
 }
 
-/* استجابة للموبايل */
-@media (max-width: 768px) {
-  .bitro-glow-text {
-    font-size: 2.2rem;
-  }
-
-  .menu-button {
-    padding: 12px 24px;
-    font-size: 0.9rem;
-  }
-
-  .hero-video-container {
-    height: 70vh;
-}
-}

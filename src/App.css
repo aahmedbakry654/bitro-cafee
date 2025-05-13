@@ -18,13 +18,3 @@ html, body {
   padding: 20px;
 }
 
-/* تجاوب للموبايل */
-@media (max-width: 767px) {
-  .App {
-    padding: 10px;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-}
-}
