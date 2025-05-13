@@ -1,20 +1,149 @@
+
+
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
-  width: 100%;
-  min-height: 100%;
+body, html {
   overflow-x: hidden;
-  font-family: system-ui, sans-serif;
-}
-
-.App {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
 }
 
+/* إصلاح حاوية الصفحة الرئيسية */
+.container, .main-container {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  overflow-x: hidden;
+}
+
+/* تحسين صور الخلفية */
+.background-image, [class*="bg-"] {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+/* تحسين القوائم */
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* تحسين العناصر الفردية في القائمة */
+.menu-item {
+  width: 100%;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* تحسين عنصر الصورة في القائمة */
+.menu-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* أزرار التنقل والقائمة */
+.navigation-button, .menu-button {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 10px;
+  touch-action: manipulation;
+}
+
+/* استعلامات الوسائط للتوافق مع مختلف أحجام الشاشات */
+@media (max-width: 480px) {
+  /* هواتف صغيرة */
+  .header {
+    padding: 10px 0;
+  }
+  
+  .menu-text, .title {
+    font-size: 1.2rem;
+  }
+  
+  /* تحسين أيقونات وسائل التواصل الاجتماعي */
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .social-icons > * {
+    margin: 0 5px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  /* هواتف متوسطة وأجهزة لوحية صغيرة */
+  .menu-text, .title {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 769px) {
+  /* أجهزة كبيرة */
+  .menu-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .menu-item {
+    width: 48%;
+  }
+}
+
+/* تحسين عنصر القائمة المضيء */
+.menu-button {
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.7);
+  border: 2px solid #ffff00;
+}
+
+/* تحسين النص العربي */
+[lang="ar"], .arabic-text {
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+  direction: rtl;
+  text-align: right;
+}
+
+/* إصلاح عرض الصور */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* تحسين أيقونات وسائل التواصل الاجتماعي في أسفل الصفحة */
+.footer-social-icons {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.footer-social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
